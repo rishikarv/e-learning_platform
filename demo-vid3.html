@@ -15,33 +15,53 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh; /* FIX */
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .container {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* center horizontally */
-      justify-content: center;
+      max-width: 1000px;
       text-align: center;
     }
 
     h1 {
       margin-bottom: 20px;
+      font-size: 28px;
     }
 
+    /* 🔥 RESPONSIVE VIDEO */
     .video-container {
+      position: relative;
       width: 100%;
-      max-width: 1000px;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
     }
 
     .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 450px;
-      border-radius: 12px;
+      height: 100%;
       border: none;
+      border-radius: 12px;
     }
+
+    /* 🔹 MOBILE */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      body {
+        align-items: flex-start; /* better spacing */
+      }
+    }
+
   </style>
 </head>
 
