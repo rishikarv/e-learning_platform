@@ -430,7 +430,7 @@ a:hover{
   /* HERO */
     .hero {
         margin-top: 100px; /* keep space below navbar */
-        padding: 20px;
+        padding-top: 120px;
         text-align: center;
     }
 
