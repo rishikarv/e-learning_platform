@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Assignment</title>
+    <link rel="stylesheet" href="style-test.css">
+</head>
+
+<body>
+
+<header class="head">
+    <h1>Frontend Assignment Questions</h1>
+</header>
+
+<main class="boxi">
+
+<form id="myForm">
+
+    <!-- 🔹 Q1 -->
+    <div class="box">
+        <label>
+            <strong>Q1. Create a Responsive Login Page</strong>
+            <span style="color:#60a5fa;">(Beginner)</span>
+            <ul>
+                <li>Include email & password fields</li>
+                <li>Add “Show Password” toggle using JavaScript</li>
+                <li>Validate inputs (empty / invalid email)</li>
+            </ul>
+        </label>
+        <input type="file" name="ans1" required>
+    </div>
+
+    <!-- 🔹 Q2 -->
+    <div class="box">
+        <label>
+            <strong>Q2. Design a Responsive Navigation Bar</strong>
+            <span style="color:#34d399;">(Intermediate)</span>
+            <ul>
+                <li>Include logo + menu items (Home, About, Contact)</li>
+                <li>Add hover effects</li>
+                <li>Make it responsive (hamburger menu)</li>
+            </ul>
+        </label>
+        <input type="file" name="ans2" required>
+    </div>
+
+    <!-- 🔹 Q3 -->
+    <div class="box">
+        <label>
+            <strong>Q3. Build a Registration Form</strong>
+            <span style="color:#34d399;">(Intermediate)</span>
+            <ul>
+                <li>Name, Email, Password, Confirm Password</li>
+                <li>Apply JavaScript validation</li>
+                <li>Show dynamic error messages</li>
+            </ul>
+        </label>
+        <input type="file" name="ans3" required>
+    </div>
+
+    <!-- 🔹 Q4 -->
+    <div class="box">
+        <label>
+            <strong>Q4. Create an Image Slider / Carousel</strong>
+            <span style="color:#fbbf24;">(Advanced)</span>
+            <ul>
+                <li>Add at least 3 images</li>
+                <li>Next/Previous buttons</li>
+                <li>Auto-slide using JavaScript</li>
+            </ul>
+        </label>
+        <input type="file" name="ans4" required>
+    </div>
+
+    <!-- 🔹 Q5 -->
+    <div class="box">
+        <label>
+            <strong>Q5. Build a Responsive Card Layout</strong>
+            <span style="color:#fbbf24;">(Advanced)</span>
+            <ul>
+                <li>Create at least 4 cards</li>
+                <li>Include image, title, description, button</li>
+                <li>Use Flexbox or Grid</li>
+            </ul>
+        </label>
+        <input type="file" name="ans5" required>
+    </div>
+
+    <!-- 🔹 BONUS -->
+    <div class="box">
+        <label>
+            <strong>Q6. Add Extra UI Features (Optional)</strong>
+            <span style="color:#a78bfa;">(Bonus)</span>
+            <ul>
+                <li>Add dark/light mode toggle</li>
+                <li>Add animations or transitions</li>
+                <li>Improve UI/UX design</li>
+            </ul>
+        </label>
+        <input type="file" name="ans6">
+    </div>
+
+    <!-- 🔹 Checkbox -->
+    <div class="checkbox-container">
+        <input type="checkbox" id="check" required>
+        <label for="check" class="checkfont">
+            All required questions are attempted.
+        </label>
+    </div>
+
+    <!-- 🔹 Submit -->
+    <div class="Submit">
+        <button type="submit">Submit →</button>
+    </div>
+
+</form>
+
+</main>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Frontend assignment submitted successfully 🚀");
+    this.reset();
+});
+</script>
+
+</body>
+</html>

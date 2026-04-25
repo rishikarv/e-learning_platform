@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack Assignment</title>
+    <link rel="stylesheet" href="style-test.css">
+</head>
+
+<body>
+
+    <!-- 🔹 Heading -->
+    <header class="head">
+        <h1>Fullstack Assignment Questions</h1>
+    </header>
+
+    <!-- 🔹 Main -->
+    <main class="boxi">
+
+        <form id="fullstackForm">
+
+            <!-- 🔹 Q1 -->
+            <div class="box">
+                <label>
+                    <strong>Q1. Build a Complete Authentication System</strong> 
+                    <span style="color:#60a5fa;">(Beginner)</span>
+                    <ul>
+                        <li>Create signup & login UI (HTML, CSS, JS)</li>
+                        <li>Connect frontend with backend APIs</li>
+                        <li>Store JWT token in localStorage</li>
+                    </ul>
+                </label>
+                <input type="file" name="q1" required>
+            </div>
+
+            <!-- 🔹 Q2 -->
+            <div class="box">
+                <label>
+                    <strong>Q2. Create a Task Management Web App</strong> 
+                    <span style="color:#34d399;">(Intermediate)</span>
+                    <ul>
+                        <li>Frontend UI to add, edit, delete tasks</li>
+                        <li>Backend API using Node.js & Express</li>
+                        <li>Store tasks in MongoDB</li>
+                    </ul>
+                </label>
+                <input type="file" name="q2" required>
+            </div>
+
+            <!-- 🔹 Q3 -->
+            <div class="box">
+                <label>
+                    <strong>Q3. Connect Frontend with Backend</strong> 
+                    <span style="color:#fbbf24;">(Intermediate)</span>
+                    <ul>
+                        <li>Use Fetch API or Axios</li>
+                        <li>Display data dynamically from backend</li>
+                        <li>Handle loading & error states</li>
+                    </ul>
+                </label>
+                <input type="file" name="q3" required>
+            </div>
+
+            <!-- 🔹 Q4 -->
+            <div class="box">
+                <label>
+                    <strong>Q4. Protected Routes & Dashboard</strong> 
+                    <span style="color:#f87171;">(Advanced)</span>
+                    <ul>
+                        <li>Restrict pages for logged-in users only</li>
+                        <li>Create a dashboard page</li>
+                        <li>Redirect users if not authenticated</li>
+                    </ul>
+                </label>
+                <input type="file" name="q4" required>
+            </div>
+
+            <!-- 🔹 Q5 -->
+            <div class="box">
+                <label>
+                    <strong>Q5. Fullstack Deployment</strong> 
+                    <span style="color:#f87171;">(Advanced)</span>
+                    <ul>
+                        <li>Deploy frontend (Netlify / Vercel)</li>
+                        <li>Deploy backend (Render / Railway)</li>
+                        <li>Connect both with live API</li>
+                    </ul>
+                </label>
+                <input type="file" name="q5" required>
+            </div>
+
+            <!-- 🔹 BONUS -->
+            <div class="box">
+                <label>
+                    <strong>Q6. Add Extra Features (Optional)</strong> 
+                    <span style="color:#a78bfa;">(Bonus)</span>
+                    <ul>
+                        <li>Add search or filter functionality</li>
+                        <li>Add animations or UI improvements</li>
+                        <li>Implement dark/light mode toggle</li>
+                    </ul>
+                </label>
+                <input type="file" name="q6">
+            </div>
+
+            <!-- 🔹 Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="check" required>
+                <label for="check" class="checkfont">
+                    All required questions are attempted.
+                </label>
+            </div>
+
+            <!-- 🔹 Submit -->
+            <div class="Submit">
+                <button type="submit">Submit →</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- 🔹 Script -->
+    <script>
+        document.getElementById("fullstackForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            alert("Fullstack assignment submitted successfully 🚀");
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

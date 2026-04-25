@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Masterclass</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+     min-height: 100vh; 
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: #1e293b;
+      padding: 20px;
+      overflow-y: auto;
+      height: max-content;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     margin-top: 40px;
+    border-radius: 30px;
+    position: sticky;
+    top: 0%;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+    }
+
+    .lesson {
+      padding: 10px;
+      margin-bottom: 8px;
+      background: #334155;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lesson:hover {
+      background: #475569;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+    .course-info {
+      margin-top: 20px;
+    }
+
+    .course-info h1 {
+      margin-bottom: 10px;
+    }
+
+   .btn{
+    text-decoration: none;
+    color: black;
+     margin-top: 15px;
+      padding: 12px 20px;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 90%;
+}
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+    <h2>Course Content</h2>
+
+
+<div class="lesson">Introduction</div>
+<div class="lesson">Routing</div>
+<div class="lesson">Data fetching</div>
+<div class="lesson">API routes</div>
+<div class="lesson">Caching</div>
+<div class="lesson">Metadata</div>
+<div class="lesson">Database models & connections</div>
+<div class="lesson">Server actions</div>
+<div class="lesson">Posthog: Booking action & Tracking</div>
+<div class="lesson">Deployment</div>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main">
+        <h1 style="text-align: center; background: linear-gradient(to left, rgb(105, 51, 51), #14146a);">
+Complete Next.js Masterclass
+</h1>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/I1V9YWqRIeI?si=ahKZZPrQf2U7tZeD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="course-info">
+  <h1 style="color:rgb(226, 226, 102);"> Course Discription</h1>
+  <p style="font-family: serif ;">
+   Complete Next.js Masterclass is a comprehensive, hands-on course that takes you from the fundamentals to advanced concepts of building modern, high-performance web applications using Next.js.
+   <br>
+   <br>
+In this course, you’ll learn how to leverage the full power of Next.js to create fast, scalable, and SEO-friendly applications. From routing and server-side rendering to API routes and full-stack development, you’ll gain practical experience by building real-world projects.
+<br>
+<br>
+You’ll also explore modern features like the App Router, dynamic rendering, authentication, and deployment strategies—giving you everything you need to build production-ready applications.
+  </p>
+  <h1 style="color:rgb(226, 226, 102)">⭐ What You’ll Learn</h1>
+  <p style="font-family: serif ;">
+ → Build full-stack applications using Next.js
+ <br>
+ → Understand routing, layouts, and the App Router
+<br>
+ → Use Server-Side Rendering (SSR) and Static Site Generation (SSG)
+<br>
+ → Create API routes and handle backend logic
+<br>
+ → Implement authentication and protected routes
+<br>
+ → Optimize performance and SEO
+ <br>
+ → Deploy apps using modern platforms
+  </p>
+<h1 style="color: rgb(226, 226, 102);">🎯 Who This Course Is For</h1>
+<p style="font-family: serif ;">
+ → Developers familiar with HTML, CSS, and JavaScript
+ <br>
+ → React developers looking to level up with Next.js
+<br>
+ → Beginners who want to learn full-stack development
+<br>
+ → Anyone aiming to build fast, modern web applications
+</p>
+  <button class="btn" data-course="next">TEST YOURSELF</button>
+  <br><br><br>
+</div>
+
+  </div>
+
+</div>
+
+</body>
+<script src="test-yourself.js"></script>
+</html>

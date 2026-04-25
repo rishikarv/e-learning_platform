@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Systems & Node.js</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+     min-height: 100vh; 
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: #1e293b;
+      padding: 20px;
+      overflow-y: auto;
+      height: max-content;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     margin-top: 40px;
+    border-radius: 30px;
+    position: sticky;
+    top: 0%;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+    }
+
+    .lesson {
+      padding: 10px;
+      margin-bottom: 8px;
+      background: #334155;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lesson:hover {
+      background: #475569;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+    .course-info {
+      margin-top: 20px;
+    }
+
+    .course-info h1 {
+      margin-bottom: 10px;
+    }
+
+   .btn{
+    text-decoration: none;
+    color: black;
+     margin-top: 15px;
+      padding: 12px 20px;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 90%;
+}
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+    <h2>Course Content</h2>
+
+
+<div class="lesson">Introduction</div>
+<div class="lesson">Getting started with Node JS</div>
+<div class="lesson">Node.js pakage manager</div>
+<div class="lesson">Node.js error handling</div>
+<div class="lesson">Node.js File System & Path Modules</div>
+<div class="lesson">Async Programming</div>
+<div class="lesson">Node.js API CRUD Project</div>
+<div class="lesson">Express Framework</div>
+<div class="lesson">Express & MongoDB REST API project</div>
+<div class="lesson">JWT User Authentication & Protecting routes</div>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main">
+        <h1 style="text-align: center; background: linear-gradient(to left, rgb(105, 51, 51), #14146a);">
+Scalable Systems & Node.js
+</h1>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ekRpc5YgVZU?si=WLMoZCT0cYLDoZhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="course-info">
+  <h1 style="color:rgb(226, 226, 102);"> Course Discription</h1>
+  <p style="font-family: serif ;">
+   Scalable Systems & Node.js is an advanced, hands-on course designed to teach you how to build high-performance, production-ready backend systems using Node.js
+   <br>
+   <br>
+In this course, you’ll learn how to design and develop applications that can handle real-world traffic, scale efficiently, and remain reliable under heavy load. You’ll go beyond basic backend development and dive into system design concepts such as microservices, load balancing, caching, and database optimization
+<br>
+<br>
+By the end of this course, you’ll have the skills to architect scalable systems, optimize performance, and build backend services that power modern web applications.
+  </p>
+  <h1 style="color:rgb(226, 226, 102)">⭐ What You’ll Learn</h1>
+  <p style="font-family: serif ;">
+ → Build fast and efficient backend applications with Node.js
+ <br>
+ → Understand event-driven architecture and asynchronous programming
+<br>
+ → Design scalable systems using microservices architecture
+<br>
+ → Implement caching strategies (Redis, in-memory caching)
+<br>
+ → Work with databases efficiently (SQL & NoSQL)
+<br>
+ → Handle high traffic with load balancing and clustering
+ <br>
+ → Optimize API performance and response times
+ <br>
+ → Deploy and monitor applications in production
+  </p>
+<h1 style="color: rgb(226, 226, 102);">🎯 Who This Course Is For</h1>
+<p style="font-family: serif ;">
+ → Intermediate to advanced developers
+ <br>
+ → Students familiar with JavaScript and basic backend concepts
+<br>
+ → Developers who want to build scalable, real-world applications
+<br>
+ → Anyone preparing for backend/system design interviews
+</p>
+  <button class="btn" data-course="node" >TEST YOURSELF</button>
+  <br><br><br>
+</div>
+
+  </div>
+
+</div>
+
+</body>
+<script src="test-yourself.js"></script>
+</html>

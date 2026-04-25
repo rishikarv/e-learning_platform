@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced UI/UX with Modern CSS</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+     min-height: 100vh; 
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: #1e293b;
+      padding: 20px;
+      overflow-y: auto;
+      height: max-content;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     margin-top: 40px;
+    border-radius: 30px;
+    position: sticky;
+    top: 0%;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+    }
+
+    .lesson {
+      padding: 10px;
+      margin-bottom: 8px;
+      background: #334155;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lesson:hover {
+      background: #475569;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+    .course-info {
+      margin-top: 20px;
+    }
+
+    .course-info h1 {
+      margin-bottom: 10px;
+    }
+
+   .btn{
+    text-decoration: none;
+    color: black;
+     margin-top: 15px;
+      padding: 12px 20px;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 90%;
+}
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+    <h2>Course Content</h2>
+
+
+<div class="lesson">Introduction</div>
+<div class="lesson">GSAP & Three.js Crash Course</div>
+<div class="lesson">3D iPhone Website</div>
+<div class="lesson">Brainwave Website</div>
+<div class="lesson">Developer Portfolio Website</div>
+
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main">
+        <h1 style="text-align: center; background: linear-gradient(to left, rgb(105, 51, 51), #14146a);">
+   Advanced UI/UX with Modern CSS
+</h1>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RbxHZwFtRT4?si=x0kj5W2evqPhdodu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="course-info">
+  <h1 style="color:rgb(226, 226, 102);"> Course Discription</h1>
+  <p style="font-family: serif ;">
+   Advanced UI/UX with Modern CSS is a hands-on course designed to help you create visually stunning and highly user-friendly web interfaces using the latest CSS techniques.
+   <br>
+   <br>
+In this course, you’ll go beyond basic styling and learn how to craft modern layouts, smooth animations, and responsive designs that deliver an exceptional user experience across all devices. You’ll explore powerful CSS features like Flexbox, Grid, custom properties (CSS variables), and advanced transitions to build interfaces that are both functional and beautiful.
+<br>
+<br>
+Whether you're designing dashboards, landing pages, or full web applications, this course will teach you how to think like a UI/UX designer while coding like a modern frontend developer.
+  </p>
+  <h1 style="color:rgb(226, 226, 102)">⭐ What You’ll Learn</h1>
+  <p style="font-family: serif ;">
+ → Create responsive layouts using Flexbox and CSS Grid
+ <br>
+ → Design modern UI components with clean spacing and typography
+<br>
+ → Use CSS animations and transitions for better user experience
+<br>
+ → Build visually appealing color systems and gradients
+<br>
+ → Apply UI/UX principles to improve usability and accessibility
+<br>
+ → Structure scalable and maintainable CSS
+  </p>
+<h1 style="color: rgb(226, 226, 102);">🎯 Who This Course Is For</h1>
+<p style="font-family: serif ;">
+ → Beginner to intermediate frontend developers
+ <br>
+ → Students who know basic HTML & CSS
+<br>
+ → Anyone who wants to improve UI design skills
+<br>
+ → Developers aiming to build modern, professional-looking websites
+</p>
+  <button class="btn" data-course="ui-ux">TEST YOURSELF</button>
+  <br><br><br>
+</div>
+
+  </div>
+
+</div>
+
+<script src="test-yourself.js"></script>
+
+</body>
+</html>

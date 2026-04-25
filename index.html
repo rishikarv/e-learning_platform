@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="course_css.css">
+   
+</head>
+<body>
+    
+    <div class="nav">
+        <h1>Invo<span style="color:rgb(158, 59, 239)">Learn</span></h1>
+
+    <nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="assessments.html">Assessments</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#review">Testimonals</a></li>
+    </ul>
+     </nav>
+    
+    <div class="navbut">
+        <button  class="login-btn" onclick="openModal()" id="loginBtn">Log in</button>
+        <button class="signup-btn" id="signupBtnHeader"><a href="SignUp_page.html">Sign up</a></button>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+    </div>
+    </div>
+  
+   <!-- HEADER -->
+   <header class="hero" id="home">
+    <div class="hero-content">
+        <div class="herotext">
+          <h1>Master in demand skills with <span style="color:rgb(148, 58, 227)">World-class</span> Experts</h1>
+          <p>Accelerate your career with interactive, project-based learning. Access thousands of high-quality courses curated by industry leaders.</p>
+        
+        <div class="hero-button">
+        <button onclick="goToCourses()">
+            Explore Courses
+        </button>
+        <button>Watch demo</button>
+        </div>
+        <div class="stats">
+            <div>
+             <h2>500k+</h2>
+            <p>courses</p>
+            </div>
+
+             <div>
+              <h2>100k+</h2>
+               <p>students</p>
+            </div>
+             <div>
+             <h2>4.9/5</h2>
+            <p>Average Rating</p>
+             </div>
+        </div>
+        
+    </div>
+    <div class="hero-image">
+        <img src="assets/main.png" alt="">
+    </div>
+    </div>
+    
+   </header>
+<!-- SECTION1 FEATURES -->
+   <section class="section1" id="features" >
+    <div class="sec1head">
+    <h1>Why Choose <span style="color:rgb(175, 57, 239)">InvoLearn</span>?</h1>
+    <br>
+    <p>We blend cutting-edge technology with world-class instruction to give you the ultimate learning experience.</p>
+   </div>
+
+   <div class="features">
+     
+    <div class="f1">
+        💻
+        <h3>Interactive Coding Environments</h3>
+        <p>Write, run, and test your code directly in the browser. No complex setups required. Just pure, immersive learning.</p>
+   </div>
+   <div class="right-card">
+   <div class="f2">🧠
+        <h3>AI-Powered Mentorship</h3>
+        <p>Get stuck? Our smart assistant provides real-time hints and explanations tailored to your learning pace.</p>
+    </div>
+    <div class="f3" >🏆
+        <h3>Industry Certificates</h3>
+        <p>Earn verified credentials backed by major tech hubs upon course completion.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- SECTION2 Courses-->
+<section class="section2" id="course">
+    <div class="sec2head">
+        <h1 style="color:rgb(247, 63, 170)">Trending Courses</h1>
+        <br>
+        <p>Hand-picked programs designed to turn you into an industry expert</p>
+    </div>
+    <div class="courses">
+
+      <div class="card">
+        <h4 class="tag">Frontend</h4>
+        <img src="assets/course_1.png" alt="">
+            <p class="rating">⭐ 4.9 (1.2k reviews)</p>
+            <span class="course-price">$49.99</span>
+            <h3>Advanced UI/UX with Modern CSS</h3>
+            <br>
+            <p>Master glassmorphism, fluid typography, and jaw-dropping animations.</p>
+              
+            <div class="info">
+            <span >⏱️ 12 Hours</span>
+            <span>📊 Advanced</span>
+            </div>
+            <div class="btn-group">
+            <button class="demo-btn" data-course="front">Watch Demo</button>  
+            <button class="cardenroll-btn" data-course="frontend">Enroll Now</button>
+            </div>
+        </div>
+
+     <div class="card">
+            <h2 class="tag">Backend</h2>
+            <img src="assets/course_2.png" alt="">
+            <p class="rating">⭐ 4.8 (950 reviews)</p>
+            <span class="course-price">$59.99</span>
+            <h3>Scalable Systems & Node.js</h3>
+            <p>Build enterprise-grade architectures with Express, MongoDB, and Redis.</p>
+            
+            <div class="info">
+            <span>⏱️ 24 Hours</span>
+            <span>📊 Intermediate</span>
+            </div>
+            <div class="btn-group">
+            <button class="demo-btn" data-course="back">Watch Demo</button>
+            <button class="cardenroll-btn" data-course="backend">Enroll Now</button>
+            </div>
+        </div>
+
+     <div class="card">
+            <h2 class="tag">Fullstack</h2>
+            <img src="assets/course_3.png" alt="">
+            <p class="rating">⭐ 5.0 (2.2k reviews)</p>
+            <span class="course-price">$89.99</span>
+            <h3>Complete Next.js Masterclass</h3>
+            <p>From zero to production. Master server actions, App Router, and auth.</p>
+            
+            <div class="info">
+            <span>⏱️ 36 Hours</span>
+            <span>📊 All Levels</span>
+            </div>
+            <div class="btn-group">
+            <button class="demo-btn" data-course="full">Watch Demo</button>
+            <button class="cardenroll-btn" data-course="Fullstack">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="view-all">
+    <a href="courses.html"><button>View All Courses</button></a>
+    </div>
+</section>
+
+<!-- SECTION 3 TESTIMONALS -->
+    <section class="Testimonals" id="review">
+        <div class="sec3head"><h1>Learner Success Stories</h1></div>
+        <div class="learner">
+        <div class="learn">
+            <p>
+                "NexLearn completely transformed my career. Within 3 months of completing the Frontend path, I landed a Senior Developer role."
+            </p>
+            <h4>Sarah Khan</h4>
+            <p style="font-size:15px;">Software Engineer @ TechCorp</p>
+        </div>
+        <div class="learn">
+            <p>
+                "The interactive coding environments are world-class. You aren't just watching videos; you are actually building things from day one."
+            </p>
+            <h4>David Chen</h4>
+            <p style="font-size:15px;">Fullstack Developer</p>
+        </div>
+        </div>
+    </section>
+
+    <footer class="foot">
+
+        <div class="foot-content">
+        <div class="foot-head">
+            <h1>Invo<span style="color:rgb(142, 61, 208)">Learn</span></h1>
+            <p>Empowering the next generation of digital creators and builders.</p>
+        </div>
+
+        <div class="foot-col">
+            <div class="column">
+            <h3>Platform</h3>
+            <p>Courses</p>
+            <p>Mentorship</p>
+            <p>Git & Github</p>
+            </div>
+
+            <div class="column">
+            <h3>Company</h3>
+            <p>About</p>
+            <p>Terms</p>
+            <p>Careers</p>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="foot-bottom">
+            <p>&copy; 2026 NexLearn Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+<!-- modal login/signup -->
+ <div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2>Welcome Back</h2>
+        <p>Sign in to continue your learning journey.</p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button class="submit-btn" type="submit">Log In</button>
+            <br>
+            <p>Don't have an account? <a href="SignUp_page.html" style="color:white">Signup</a></p>
+        </form>
+        
+    </div>
+</div>
+
+<div id="msgg">Login Successful ✅</div>
+  
+</body>
+<script>
+function openModal() {
+    document.getElementById("loginModal").style.display = "flex";
+    document.getElementById("msgg").classList.remove("show");
+}
+
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+function showMessage() {
+    let msg = document.getElementById("msgg");
+     msg.classList.add("show");
+     void msg.offsetWidth;
+    msg.classList.add("show");
+    setTimeout(() => {
+        msg.classList.remove("show");
+    }, 3000);
+
+   
+}
+
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let email = document.querySelector("#loginForm input[type='email']").value;
+    let password = document.querySelector("#loginForm input[type='password']").value;
+
+    if(email.trim() !== "" && password.trim() !== "") {
+        localStorage.setItem("isLoggedIn", "true");
+        closeModal();
+        showMessage();
+
+        // 🔥 Navbar update instantly (same page pe)
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("signupBtnHeader").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "inline-block";
+    } 
+    else {
+        alert("Please fill all fields!");
+    }
+});
+
+function goToCourses() {
+    window.location.href = "courses.html";
+}
+
+
+
+</script>
+<script src="enroll-button.js"></script> 
+<script src="main.js"></script>
+<script src="demo-page.js"></script>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="course_css.css">
+   
+</head>
+<body>
+     <div class="nav">
+        <h1>Invo<span style="color:rgb(158, 59, 239)">Learn</span></h1>
+
+    <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a>Courses</a></li>
+       
+    </ul>
+     </nav>
+    
+    <div class="navbut">
+        <button  onclick="openLogin()">Log in</button>
+        <button class="signup-btn" id="signupBtnHeader"><a href="SignUp_page.html">Sign up</a></button>
+    </div>
+    </div>
+     
+    <header class="hero">
+        <div class="head">
+            <h1>Explore <span style="color:blueviolet">All Courses</span></h1>
+            <p>Master in-demand skills from industry experts. Choose from our complete catalog of premium programs.
+            </p>
+        </div>
+        
+
+    </header>
+
+    <section>
+        <div class="courses">
+            <div class="card">
+               <h4 class="tag">Frontend</h4>
+                 <img src="assets/course_1.png" alt="">
+            <p class="rating">⭐ 4.9 (1.2k reviews)</p>
+            <span class="price">$49.99</span>
+            <h3>Advanced UI/UX with Modern CSS</h3>
+            <br>
+            <p>Master glassmorphism, fluid typography, and jaw-dropping animations.</p>
+              
+            <div class="info">
+            <span >⏱️ 12 Hours</span>
+            <span>📊 Advanced</span>
+            </div>
+            
+            <div class="price">
+            <button class="demo-btn" data-course="front">Watch Demo</button>
+            <button class="cardenroll-btn" data-course="frontend">Enroll Now</button>
+            </div>
+        </div>
+
+     <div class="card">
+            <h2 class="tag">Backend</h2>
+            <img src="assets/course_2.png" alt="">
+            <p class="rating">⭐ 4.8 (950 reviews)</p>
+            <span class="price">$59.99</span>
+            <h3>Scalable Systems & Node.js</h3>
+            <p>Build enterprise-grade architectures with Express, MongoDB, and Redis.</p>
+            
+            <div class="info">
+            <span>⏱️ 24 Hours</span>
+            <span>📊 Intermediate</span>
+            </div>
+            <div class="price">
+            <button class="demo-btn" data-course="back">Watch Demo</button>
+            <button class="cardenroll-btn" data-course="backend">Enroll Now</button>
+            </div>
+        </div>
+
+     <div class="card">
+            <h2 class="tag">Fullstack</h2>
+            <img src="assets/course_3.png" alt="">
+            <p class="rating">⭐ 5.0 (2.2k reviews)</p>
+            <span class="price">$89.99</span>
+            <h3>Complete Next.js Masterclass</h3>
+            <p>From zero to production. Master server actions, App Router, and auth.</p>
+            
+            <div class="info">
+            <span>⏱️ 36 Hours</span>
+            <span>📊 All Levels</span>
+            </div>
+            <div class="price">
+            <button class="demo-btn" data-course="full">Watch Demo</button>
+            <button class="cardenroll-btn" data-course="fullstack">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="tag">Data science</h2>
+            <img src="assets/course_4.png" alt="">
+            <p class="rating">⭐ 4.8 (1.1k reviews)</p>
+            <span class="price">$39.99</span>
+            <h3>Python for Data Professionals</h3>
+            <p>Learn pandas, numpy, and visualization libraries to turn data into insights.</p>
+            
+            <div class="info">
+            <span>⏱️ 20 Hours</span>
+            <span>📊 Beginner</span>
+            </div>
+            <div class="price">
+            <button><a href="https://www.youtube.com/watch?v=WG5ikvJ2TKA">Watch Demo</a></button>
+            <button>Enroll Now</button>
+            </div>
+        </div>
+         
+        <div class="card">
+            <h2 class="tag">AI / ML</h2>
+            <img src="assets/course_5.png" alt="">
+            <p class="rating">⭐ 4.9 (800 reviews)</p>
+            <span class="price" >$99.99</span>
+            <h3>Applied Machine Learning</h3>
+            <p>Build neural networks and understand the core algorithms powering modern AI.</p>
+            
+            <div class="info">
+            <span>⏱️ 40 Hours</span>
+            <span>📊 Advanced</span>
+            </div>
+            <div class="price">
+            <button><a href="https://www.youtube.com/watch?v=WG5ikvJ2TKA">Watch Demo</a></button>
+            <button>Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="tag">Cloud Computing</h2>
+            <img src=assets/course_7.png alt="">
+            <p class="rating">⭐ 4.9 (1.5k reviews)</p>
+            <span class="price">$120.00</span>
+            <h3>AWS Solutions Architect</h3>
+            <p>Master cloud infrastructure, auto-scaling, load balancing, and security.</p>
+            
+            <div class="info">
+            <span>⏱️ 45 Hours</span>
+            <span>📊 Advanced</span>
+            </div>
+            <div class="price">
+            <button><a href="https://www.youtube.com/watch?v=WG5ikvJ2TKA">Watch Demo</a></button>
+            <button>Enroll Now</button>
+            </div>
+        </div>
+         
+        <div class="card">
+            <h2 class="tag">Design</h2>
+            <img src="assets/course_8.png" alt="">
+            <p class="rating">⭐ 4.9 (1.2k reviews)</p>
+            <span class="price" >$55.00</span>
+            <h3>Figma to Production</h3>
+            <p>The ultimate UI/UX design workflow. Prototyping, systems, and handoff.</p>
+            
+            <div class="info">
+            <span>⏱️ 18 Hours</span>
+            <span>📊 All Levels</span>
+            </div>
+            <div class="price">
+            <button>Watch Demo</button>
+            <button>Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="tag">Mobile Dev</h2>
+            <img src="assets/course_6.png" alt="">
+            <p class="rating">⭐ 4.7 (650 reviews)</p>
+            <span class="price">$59.99</span>
+            <h3>Cross-Platform Mobile Apps</h3>
+            <p>Deploy to iOS and Android simultaneously using React Native and Expo.</p>
+            
+            <div class="info">
+            <span>⏱️ 28 Hours</span>
+            <span>📊 Advanced</span>
+            </div>
+            <div class="price">
+            <button>Watch Demo</button>
+            <button>Enroll Now</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+     <footer class="foot">
+
+        <div class="foot-cnt">
+            <h1>Invo<span style="color:rgb(142, 61, 208)">Learn</span></h1>
+            <p>Empowering the next generation of digital creators and builders.</p>
+        </div>
+
+        <script src="enroll-button.js"></script>
+        <script src ="demo-page.js"></script>
+        <script src="signup.js"></script>
+</body>
+</html>

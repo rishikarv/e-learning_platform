@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessments Portal</title>
+<style>
+body {
+    margin: 0;
+    height:300vh;
+    background:linear-gradient(rgb(35, 35, 57),rgb(4, 3, 27));
+    color:white;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+}
+.main-container {
+    background:transparent;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    margin-left:500px;
+    width:90%;
+    max-width:900px;
+    margin:0px auto;
+}
+
+select {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    width: 220px;   /* bigger */
+    background: #0f172a;
+    color:white;
+}
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color:white;
+}
+.para{
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+#quizContainer {
+    margin-top: 20px;
+    width:100%;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #6a5af9, #a855f7);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size:17px;
+}
+.dropdowns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* 👈 left align */
+    gap: 15px;
+    margin: 15px auto;
+    width: fit-content;
+    
+}
+
+.options label {
+    font-size:18px;
+   display:flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    
+}
+.options input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#quizContainer p {
+    font-size: 20px;   /* increase as you like */
+    font-weight: 600;
+
+    
+}
+.question-block {
+    background: linear-gradient(145deg, #020617, #0f172a);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 20px;
+    width:100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.question-block:hover {
+    transform: translateY(-5px);
+}
+/* Question text */
+.question-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+/* 🔹 Navbar */
+/* 🔹 Navbar Container */
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background: #0f172a;
+}
+
+/* 🔹 Logo (left) */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: rgb(158, 59, 239);
+}
+
+/* 🔹 Center nav */
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar li:hover {
+    transform: scale(1.07);
+}
+.navbar a:hover{
+    color:white;
+}
+.nav h1{
+    font-size: 28px;
+}
+</style>
+
+</head>
+<body>
+
+     <div class="nav">
+        <h1 class="logo">Invo<span style="color:rgb(158, 59, 239)">Learn</span></h1>
+
+    <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="assessments.html">Assessments</a></li>
+       
+    </ul>
+     </nav>
+    </div>
+    
+    <div class="main-container">
+    <h2>Assesments</h2>
+    <p class="para">Practice makes perfect 🚀 <br>
+    Select a course and topic above, attempt the questions, and track your progress.</p>
+     <br><br>
+<!-- Course Dropdown -->
+ <div class="dropdowns">
+<select id="courseSelect" onchange="loadTopics()">
+    <option value="">-- Select Course --</option>
+    <option value="frontend">Frontend</option>
+    <option value="backend">Backend</option>
+    <option value="fullstack">Fullstack</option>
+    <option value="datascience">Data Science</option>
+    <option value="aiml">AI/ML</option>
+    <option value="uiux">UI/UX</option>
+    <option value="cloud">Cloud Computing</option>
+</select>
+
+<!-- Topic Dropdown -->
+<select id="topicSelect" onchange="loadQuestions()">
+    <option value="">-- Select Topic --</option>
+</select>
+</div>
+<!-- Questions -->
+<div id="quizContainer"></div>
+
+<h3 id="result" style="font-size:27px;"></h3>
+</div>
+</body>
+
+<script>
+const data = {
+    frontend: {
+        HTML: [
+            {
+                question: "What is HTML?",
+                options: ["Programming", "Markup Language", "Database"],
+                answer: "Markup Language"
+            },
+            {
+                question: "Which attribute is used to provide alternative text for an image?",
+                options: ["title", "alt", "href"],
+                answer: "alt"
+            },
+             {
+        question: "Which HTML attribute is used to define inline styles?",
+        options: ["class", "style", "font"],
+        answer: "style"
+         },
+         {
+        question: "Which attribute is used to provide alternative text for an image?",
+        options: ["title", "alt", "name"],
+        answer: "alt"
+         },
+    {
+        question: "Which part of HTML contains metadata?",
+        options: ["body", "head", "footer"],
+        answer: "head"
+    },
+    {
+        question: "Which HTML element is used to create a form?",
+        options: ["form", "input", "label"],
+        answer: "form"
+    },
+    {
+        question: "Which input type is used for passwords?",
+        options: ["text", "password", "email"],
+        answer: "password"
+    }
+     
+        ],
+        CSS: [
+            {
+                question: "CSS stands for?",
+                options: ["Color Sheet", "Cascading Style Sheets", "Creative Style"],
+                answer: "Cascading Style Sheets"
+            },
+            {
+        question: "Which property is used to change text color?",
+        options: ["font-color", "color", "text-color"],
+        answer: "color"
+    },
+    {
+        question: "Which property controls the size of text?",
+        options: ["text-size", "font-size", "size"],
+        answer: "font-size"
+    },
+    {
+        question: "Which property is used to change background color?",
+        options: ["bgcolor", "background-color", "color"],
+        answer: "background-color"
+    },
+    {
+        question: "Which CSS property is used to make text bold?",
+        options: ["font-style", "font-weight", "text-bold"],
+        answer: "font-weight"
+    }
+        ],
+        Javascript: [
+            {
+                question: "JS is used for?",
+                options: ["Structure", "Styling", "Logic"],
+                answer: "Logic"
+            },
+            {
+        question: "Which language is used to add logic to web pages?",
+        options: ["HTML", "CSS", "JavaScript"],
+        answer: "JavaScript"
+    },
+    {
+        question: "Which keyword is used to declare a variable?",
+        options: ["var", "int", "string"],
+        answer: "var"
+    },
+    {
+        question: "Which symbol is used for single-line comments?",
+        options: ["//", "/* */", "#"],
+        answer: "//"
+    },
+    {
+        question: "Which function is used to display a message in a popup?",
+        options: ["console.log", "alert", "print"],
+        answer: "alert"
+    },
+    {
+        question: "Which method is used to select an element by its id?",
+        options: ["getElementById", "querySelectorAll", "getElementsByClass"],
+        answer: "getElementById"
+    }
+        ]
+    },
+
+    backend: {
+        Python: [
+            {
+                question: "Python is?",
+                options: ["Compiled", "Interpreted", "Markup"],
+                answer: "Interpreted"
+            },
+            {
+        question: "Which keyword is used to define a function in Python?",
+        options: ["function", "def", "fun"],
+        answer: "def"
+    },
+    {
+        question: "Which symbol is used for comments in Python?",
+        options: ["//", "#", "/* */"],
+        answer: "#"
+    },
+    {
+        question: "Which data type is used to store text?",
+        options: ["int", "str", "bool"],
+        answer: "str"
+    },
+    {
+        question: "Which function is used to display output in Python?",
+        options: ["echo", "print", "display"],
+        answer: "print"
+    }
+        ],
+        SQL: [
+            {
+                question: "SQL is used for?",
+                options: ["Styling", "Database", "UI"],
+                answer: "Database"
+            },
+                {
+        question: "What does SQL stand for?",
+        options: ["Structured Query Language", "Simple Query Language", "Standard Question Language"],
+        answer: "Structured Query Language"
+    },
+    {
+        question: "Which command is used to retrieve data from a database?",
+        options: ["GET", "SELECT", "FETCH"],
+        answer: "SELECT"
+    },
+    {
+        question: "Which clause is used to filter records?",
+        options: ["ORDER BY", "WHERE", "GROUP BY"],
+        answer: "WHERE"
+    },
+    {
+        question: "Which command is used to insert data into a table?",
+        options: ["ADD", "INSERT", "UPDATE"],
+        answer: "INSERT"
+    },
+    {
+        question: "Which command is used to delete data from a table?",
+        options: ["REMOVE", "DELETE", "DROP"],
+        answer: "DELETE"
+    }
+        ]
+    },
+    fullstack: {
+        React: [
+    {
+        question: "What is React?",
+        options: ["Library", "Database", "Programming Language"],
+        answer: "Library"
+    },
+    {
+        question: "Which company developed React?",
+        options: ["Google", "Facebook", "Microsoft"],
+        answer: "Facebook"
+    },
+    {
+        question: "What is used to manage data in React?",
+        options: ["State", "Props", "Variables"],
+        answer: "State"
+    },
+    {
+        question: "Which hook is used for state in React?",
+        options: ["useState", "useEffect", "useRef"],
+        answer: "useState"
+    },
+    {
+        question: "React is mainly used for?",
+        options: ["Backend", "UI Development", "Database"],
+        answer: "UI Development"
+    }
+],
+        Git: [
+    {
+        question: "What is Git?",
+        options: ["Version Control System", "Database", "Programming Language"],
+        answer: "Version Control System"
+    },
+    {
+        question: "Which command is used to initialize a repository?",
+        options: ["git init", "git start", "git create"],
+        answer: "git init"
+    },
+    {
+        question: "Which command is used to save changes?",
+        options: ["git push", "git commit", "git save"],
+        answer: "git commit"
+    },
+    {
+        question: "Which command uploads code to remote repository?",
+        options: ["git pull", "git push", "git upload"],
+        answer: "git push"
+    },
+    {
+        question: "Which command is used to get code from remote?",
+        options: ["git fetch", "git pull", "git clone"],
+        answer: "git pull"
+    }
+],
+    Api: [
+    {
+        question: "What does API stand for?",
+        options: ["Application Programming Interface", "Advanced Program Integration", "Application Process Interface"],
+        answer: "Application Programming Interface"
+    },
+    {
+        question: "API is used for?",
+        options: ["Connecting applications", "Styling UI", "Database storage"],
+        answer: "Connecting applications"
+    },
+    {
+        question: "Which method is used to get data from API?",
+        options: ["POST", "GET", "PUT"],
+        answer: "GET"
+    },
+    {
+        question: "Which method is used to send data to server?",
+        options: ["GET", "POST", "DELETE"],
+        answer: "POST"
+    },
+    {
+        question: "API responses are usually in which format?",
+        options: ["HTML", "JSON", "CSS"],
+        answer: "JSON"
+    }
+]
+    },
+    uiux: {
+        Design: [
+            {
+                question: "UX means?",
+                options: ["User Experience", "User XML", "User Execute"],
+                answer: "User Experience"
+            }
+        ],
+        Figma: [
+            {
+                question: "Figma is used for?",
+                options: ["Coding", "Design", "Database"],
+                answer: "Design"
+            }
+        ]
+    }
+    
+};
+
+function loadTopics() {
+    let course = document.getElementById("courseSelect").value;
+    let topicSelect = document.getElementById("topicSelect");
+
+    const topics = {
+        frontend: ["HTML", "CSS", "Javascript"],
+        backend: ["Python", "SQL"],
+        fullstack: ["React", "Git", "Api"],
+       datascience: ["Python", "Statistics", "Pandas", "Numpy"],
+       aiml: ["Machine Learning", "Deep Learning", "Neural Networks", "NLP"],
+        uiux: ["Figma", "Design"],
+       cloud: ["AWS", "Azure", "GCP", "Cloud Basics"]
+    };
+
+    topicSelect.innerHTML = `<option value="">-- Select Topic --</option>`;
+
+    if (!course) return;
+
+    // ✅ use topics instead of data
+    topics[course].forEach(topic => {
+        topicSelect.innerHTML += `<option value="${topic}">${topic}</option>`;
+    });
+}
+
+function loadQuestions() {
+    let course = document.getElementById("courseSelect").value;
+    let topic = document.getElementById("topicSelect").value;
+    let container = document.getElementById("quizContainer");
+
+    container.innerHTML = "";
+
+    if (!course || !topic) return;
+
+    data[course][topic].forEach((q, index) => {
+
+        let html = `
+        <div class="question-block">
+            <p class="question-title">${index + 1}. ${q.question}</p>
+
+            <div class="options">
+        `;
+
+        q.options.forEach(opt => {
+            html += `
+                <label>
+                    <input type="radio" name="q${index}" value="${opt}">
+                    ${opt}
+                </label>
+            `;
+        });
+
+        html += `
+            </div>
+        </div>
+        `;
+
+        container.innerHTML += html;
+    });
+
+    container.innerHTML += `<button onclick="submitQuiz()">Submit</button>`;
+}
+function submitQuiz() {
+    let course = document.getElementById("courseSelect").value;
+    let topic = document.getElementById("topicSelect").value;
+
+    let questions = data[course][topic];
+    let score = 0;
+
+    questions.forEach((q, index) => {
+        let selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && selected.value === q.answer) {
+            score++;
+        }
+    });
+
+    document.getElementById("result").innerText =
+        "Score: " + score + "/" + questions.length;
+}
+</script>
+</html>
