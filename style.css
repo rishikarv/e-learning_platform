@@ -468,16 +468,9 @@ a:hover{
 
     /* 🔹 STATS */
     .stats {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 10px;
-    }
-    .Testimonals{
-        flex-direction:row;
-        align-items:center;
-        gap:20px;
-        text-align:center;
-        
     }
       .foot-content {
         flex-direction: column;
